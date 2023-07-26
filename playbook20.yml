@@ -1,0 +1,12 @@
+---
+- name: Implementing when conditions
+  hosts: all
+  vars:
+    - a: 10
+  tasks:
+     - name: copy passwd file
+       copy:
+         src: /etc/paaswd
+         dest: /tmp
+       when: a == 20
+...
